@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+
+
+<xs:element name="altura" type="xs:decimal"/>
+<xs:element name="peso" type="xs:decimal"/>
+<xs:element name="categoria" type="xs:string"/>
+<xs:element name="habilidad" type="xs:string"/>
+
+<xs:element name="sexo">
+   <xs:simpleType>
+      <xs:restriction base="xs:string">
+          <xs:enumeration value="M"/>
+          <xs:enumeration value="F"/>
+          <xs:enumeration value="I"/>
+      </xs:restriction>
+   </xs:simpleType>
+</xs:element>
+
+
+
+
+<xs:element name="descripcion" type="xs:string"/>
+<xs:element name="descripciondebilidad" type="xs:string"/>
+<xs:element name="efectividad" type="xs:string"/>
+<xs:element name="descripcionfortaleza" type="xs:string"/>
+<xs:element name="efectividaddos" type="xs:string"/>
+
+
+
+<xs:element name="ps">
+    <xs:simpleType>
+        <xs:restriction base="xs:integer">
+            <xs:maxInclusive value="255" />
+            <xs:minInclusive value ="1" />
+        </xs:restriction>
+    </xs:simpleType>
+ </xs:element>
+
+ <xs:element name="at">
+    <xs:simpleType>
+        <xs:restriction base="xs:integer">
+            <xs:maxInclusive value="255" />
+            <xs:minInclusive value ="1" />
+        </xs:restriction>
+    </xs:simpleType>
+ </xs:element>
+
+
+ <xs:element name="def">
+    <xs:simpleType>
+        <xs:restriction base="xs:integer">
+            <xs:maxInclusive value="255" />
+            <xs:minInclusive value ="1" />
+        </xs:restriction>
+    </xs:simpleType>
+ </xs:element>
+
+ <xs:element name="spat">
+    <xs:simpleType>
+        <xs:restriction base="xs:integer">
+            <xs:maxInclusive value="255" />
+            <xs:minInclusive value ="1" />
+        </xs:restriction>
+    </xs:simpleType>
+ </xs:element>
+
+ <xs:element name="spde">
+    <xs:simpleType>
+        <xs:restriction base="xs:integer">
+            <xs:maxInclusive value="255" />
+            <xs:minInclusive value ="1" />
+        </xs:restriction>
+    </xs:simpleType>
+ </xs:element>
+
+ <xs:element name="vel">
+    <xs:simpleType>
+        <xs:restriction base="xs:integer">
+            <xs:maxInclusive value="255" />
+            <xs:minInclusive value ="1" />
+        </xs:restriction>
+    </xs:simpleType>
+ </xs:element>
+
+
+
+<xs:element name="tiene_megaevolucion" type="xs:boolean"/>
+
+<xs:element name="orden">
+    <xs:simpleType>
+        <xs:restriction base="xs:integer">
+            <xs:maxInclusive value="2" />
+            <xs:minInclusive value ="-2" />
+        </xs:restriction>
+    </xs:simpleType>
+ </xs:element>
+
+ <xs:element name="num_pokedex">
+    <xs:simpleType>
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value ="1" />
+        </xs:restriction>
+    </xs:simpleType>
+ </xs:element>
+
+
+
+
+<!-- Atributos-->
+
+<xs:attribute name="nombre" type="xs:string"/>
+
+<xs:attribute name="num_pokedex">
+    <xs:simpleType>
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value ="1" />
+        </xs:restriction>
+    </xs:simpleType>
+</xs:attribute>
+
+<xs:attribute name="generacion">
+    <xs:simpleType>
+        <xs:restriction base="xs:integer">
+            <xs:maxInclusive value="8" />
+            <xs:minInclusive value ="1" />
+        </xs:restriction>
+    </xs:simpleType>
+</xs:attribute>
+
+<xs:attribute name="tipo">
+    <xs:simpleType>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="comun"/>
+            <xs:enumeration value="starter"/>
+            <xs:enumeration value="pseudo_legendario"/>
+            <xs:enumeration value="legendario"/>
+            <xs:enumeration value="ultra_ente"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:attribute>
+
+
+<!-- Elementos Compuestos-->
+
+<xs:element name="datos_generales" >
+    <xs:complexType>
+        <xs:sequence minOccurs="1">
+            <xs:element ref="altura"/>
+            <xs:element ref="peso"/>
+            <xs:element ref="sexo"/>
+            <xs:element ref="categoria"/>
+            <xs:element ref="habilidad"/>
+        </xs:sequence>
+    </xs:complexType>
+ </xs:element>
+
+
+
+
+ <xs:element name="tipo" >
+    <xs:complexType>
+        <xs:sequence minOccurs="1" maxOccurs="2">
+            <xs:element ref="descripcion"/>
+        </xs:sequence>
+    </xs:complexType>
+ </xs:element>
+
+ <xs:element name="tipos" >
+    <xs:complexType>
+        <xs:sequence minOccurs="1">
+            <xs:element ref="tipo"/>
+        </xs:sequence>
+    </xs:complexType>
+ </xs:element>
+
+
+ <xs:element name="tipodebilidad" >
+    <xs:complexType>
+        <xs:sequence minOccurs="1">
+            <xs:element ref="descripciondebilidad"/>
+        </xs:sequence>
+    </xs:complexType>
+ </xs:element>
+
+ <xs:element name="debilidad" >
+    <xs:complexType>
+        <xs:sequence maxOccurs="unbounded">
+            <xs:element ref="tipodebilidad"/>
+            <xs:element ref="efectividad"/>
+        </xs:sequence>
+    </xs:complexType>
+ </xs:element>
+
+ <xs:element name="debilidades" >
+    <xs:complexType>
+        <xs:sequence minOccurs="1">
+            <xs:element ref="debilidad"/>
+        </xs:sequence>
+    </xs:complexType>
+ </xs:element>
+
+ <xs:element name="tipofortaleza" >
+    <xs:complexType>
+        <xs:sequence minOccurs="1">
+            <xs:element ref="descripcionfortaleza"/>
+        </xs:sequence>
+    </xs:complexType>
+ </xs:element>
+
+ <xs:element name="fortaleza" >
+    <xs:complexType>
+        <xs:sequence minOccurs="1">
+            <xs:element ref="tipofortaleza"/>
+            <xs:element ref="efectividaddos"/>
+        </xs:sequence>
+    </xs:complexType>
+ </xs:element>
+
+ <xs:element name="fortalezas" >
+    <xs:complexType>
+        <xs:sequence minOccurs="1">
+            <xs:element ref="fortaleza"/>
+        </xs:sequence>
+    </xs:complexType>
+ </xs:element>
+
+ <xs:element name="tipologia">
+    <xs:complexType>
+        <xs:sequence minOccurs="1">
+            <xs:element ref="tipos"/>
+            <xs:element ref="debilidades"/>
+            <xs:element ref="fortalezas"/>
+        </xs:sequence>
+    </xs:complexType>
+ </xs:element>
+
+
+
+
+
+ <xs:element name="stats_base">
+    <xs:complexType>
+        <xs:sequence minOccurs="1">
+            <xs:element ref="ps"/>
+            <xs:element ref="at"/>
+            <xs:element ref="def"/>
+            <xs:element ref="spat"/>
+            <xs:element ref="spde"/>
+            <xs:element ref="vel"/>
+        </xs:sequence>
+    </xs:complexType>
+ </xs:element>
+
+
+
+
+
+ <xs:element name="evolucion">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element ref="orden"/>
+            <xs:element ref="num_pokedex"/>
+        </xs:sequence>
+    </xs:complexType>
+ </xs:element>
+
+ <xs:element name="evoluciones">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element ref="tiene_megaevolucion"/>
+            <xs:element ref="evolucion"/>
+        </xs:sequence>
+    </xs:complexType>
+ </xs:element>
+
+
+
+ <xs:element name="pokemon">
+    <xs:complexType>
+        <xs:sequence minOccurs="1">
+            <xs:element ref="datos_generales"/>
+            <xs:element ref="tipologia"/>
+            <xs:element ref="stats_base"/>
+            <xs:element ref="evoluciones"/>
+        </xs:sequence>
+            <xs:attribute ref="nombre"/>
+            <xs:attribute ref="num_pokedex"/>
+            <xs:attribute ref="generacion"/>
+            <xs:attribute ref="tipo"/>
+    </xs:complexType>
+ </xs:element>
+
+ <xs:element name="pokedex">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element ref="pokemon"/>    
+        </xs:sequence>
+    </xs:complexType>
+ </xs:element>
+ 
+
+
+</xs:schema>

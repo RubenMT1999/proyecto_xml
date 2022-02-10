@@ -6,7 +6,7 @@
 
 
 
-<pokedex>
+<pokedex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="esquemas.xsd">
     <pokemon nombre= "bulbasur" num_pokedex= "1" generacion="1" tipo= "starter">
 
         <datos_generales>
