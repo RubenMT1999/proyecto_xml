@@ -141,6 +141,8 @@
     </xs:simpleType>
 </xs:attribute>
 
+<xs:attribute name="url_imagen" type="xs:string"/>
+
 
 <!-- Elementos Compuestos-->
 

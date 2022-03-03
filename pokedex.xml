@@ -2,12 +2,12 @@
 
 
 
-<!DOCTYPE pokedex SYSTEM "implementacion.dtd">
+<!-- <!DOCTYPE pokedex SYSTEM "implementacion.dtd">-->
 
+<!-- xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="esquemas.xsd"-->
 
-
-<pokedex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="esquemas.xsd">
-    <pokemon nombre= "bulbasur" num_pokedex= "1" generacion="1" tipo= "starter">
+<pokedex >
+    <pokemon nombre= "bulbasur" num_pokedex= "1" generacion="1" tipo= "starter" url_imagen="https://tecmoviles.com/wp-content/uploads/2016/09/evolucion-de-bulbasaur-todos-los-trucos-bulbasaur-600x600.png">
 
         <datos_generales>
             <altura>0.45</altura>
@@ -55,6 +55,283 @@
             <evolucion>
                 <orden>-1</orden>
                 <num_pokedex>2</num_pokedex>
+            </evolucion>
+        </evoluciones>
+
+    </pokemon>
+
+    <pokemon nombre= "houndour" num_pokedex= "8" generacion="2" tipo= "pseudo-legendario" url_imagen="https://static.wikia.nocookie.net/espokemon/images/b/ba/Houndour.png/revision/latest?cb=20140210190419">
+
+        <datos_generales>
+            <altura>0.6</altura>
+            <peso>10.15</peso>
+            <sexo>M</sexo>
+            <categoria>fuego</categoria>
+            <categoria>siniestro</categoria>
+            <habilidad>absorbe fuego</habilidad>
+            <habilidad>madrugar</habilidad>
+        </datos_generales>
+
+        <tipologia>
+            <tipos>
+                <tipo>
+                    <descripcion>fuego</descripcion>
+                </tipo>
+            </tipos>
+            <debilidades>
+                <debilidad>
+                    <tipodebilidad>
+                        <descripciondebilidad>agua</descripciondebilidad>
+                    </tipodebilidad>
+                    <efectividad>x2</efectividad>
+                </debilidad>
+            </debilidades>
+            <fortalezas>
+                <fortaleza>
+                    <tipofortaleza>
+                        <descripcionfortaleza>planta</descripcionfortaleza>
+                    </tipofortaleza>
+                    <efectividaddos>x3</efectividaddos>
+                </fortaleza>
+            </fortalezas>
+        </tipologia>
+
+        <stats_base>
+            <ps>70</ps>
+            <at>30</at>
+            <def>25</def>
+            <spat>25</spat>
+            <spde>30</spde>
+            <vel>10</vel>
+        </stats_base>
+
+        <evoluciones>
+            <tiene_megaevolucion>false</tiene_megaevolucion>
+            <evolucion>
+                <orden>1</orden>
+                <num_pokedex>49</num_pokedex>
+            </evolucion>
+        </evoluciones>
+
+    </pokemon>
+
+
+
+    <pokemon nombre= "snorlax" num_pokedex= "21" generacion="1" tipo= "comun" url_imagen="https://www.google.com/imgres?imgurl=https%3A%2F%2Fpbs.twimg.com%2Fprofile_images%2F1339720808571285506%2FrduevdF8_400x400.jpg&imgrefurl=https%3A%2F%2Ftwitter.com%2Fmunchlax_x&tbnid=rA90VODd3Wnk7M&vet=10CNYBEDMowAFqFwoTCJClgI6cqvYCFQAAAAAdAAAAABAC..i&docid=910dbDfsfx-jwM&w=400&h=400&q=snorlax&ved=0CNYBEDMowAFqFwoTCJClgI6cqvYCFQAAAAAdAAAAABAC#imgrc=BZmcV9nkYmAjSM&imgdii=-VwMcRwMjvVm1M">
+
+        <datos_generales>
+            <altura>0.8</altura>
+            <peso>300</peso>
+            <sexo>M</sexo>
+            <categoria>luchador</categoria>
+            <categoria>tierra</categoria>
+            <habilidad>aplastar</habilidad>
+            <habilidad>madrugar</habilidad>
+        </datos_generales>
+
+        <tipologia>
+            <tipos>
+                <tipo>
+                    <descripcion>luchador</descripcion>
+                </tipo>
+            </tipos>
+            <debilidades>
+                <debilidad>
+                    <tipodebilidad>
+                        <descripciondebilidad>fuego</descripciondebilidad>
+                    </tipodebilidad>
+                    <efectividad>x2</efectividad>
+                </debilidad>
+            </debilidades>
+            <fortalezas>
+                <fortaleza>
+                    <tipofortaleza>
+                        <descripcionfortaleza>planta</descripcionfortaleza>
+                    </tipofortaleza>
+                    <efectividaddos>x3</efectividaddos>
+                </fortaleza>
+            </fortalezas>
+        </tipologia>
+
+        <stats_base>
+            <ps>150</ps>
+            <at>40</at>
+            <def>85</def>
+            <spat>35</spat>
+            <spde>20</spde>
+            <vel>10</vel>
+        </stats_base>
+
+        <evoluciones>
+            <tiene_megaevolucion>false</tiene_megaevolucion>
+            <evolucion>
+                <orden>1</orden>
+                <num_pokedex>21</num_pokedex>
+            </evolucion>
+        </evoluciones>
+
+    </pokemon>
+
+    <pokemon nombre= "pikachu" num_pokedex= "1" generacion="1" tipo= "starter" url_imagen="https://www.google.com/imgres?imgurl=https%3A%2F%2Fassets.pokemon.com%2Fassets%2Fcms2%2Fimg%2Fwatch-pokemon-tv%2Fseasons%2Fseason23%2Fseason23_ep01_ss04.jpg&imgrefurl=https%3A%2F%2Fwww.pokemon.com%2Fel%2Fepisodios-pokemon%2F23_01-presentando-a-pikachu%2F&tbnid=d_RNA6k7FDKG_M&vet=12ahUKEwjPjPjAnKr2AhW9QkEAHewPAWcQMygnegUIARCxAg..i&docid=V-5VhN4q4OA9oM&w=578&h=327&q=pikachu&ved=2ahUKEwjPjPjAnKr2AhW9QkEAHewPAWcQMygnegUIARCxAg">
+
+        <datos_generales>
+            <altura>0.6</altura>
+            <peso>8.15</peso>
+            <sexo>M</sexo>
+            <categoria>electrico</categoria>
+            <habilidad>impactrueno</habilidad>
+            <habilidad>cola ferrea</habilidad>
+        </datos_generales>
+
+        <tipologia>
+            <tipos>
+                <tipo>
+                    <descripcion>rayo</descripcion>
+                </tipo>
+            </tipos>
+            <debilidades>
+                <debilidad>
+                    <tipodebilidad>
+                        <descripciondebilidad>fuego</descripciondebilidad>
+                    </tipodebilidad>
+                    <efectividad>x2</efectividad>
+                </debilidad>
+            </debilidades>
+            <fortalezas>
+                <fortaleza>
+                    <tipofortaleza>
+                        <descripcionfortaleza>agua</descripcionfortaleza>
+                    </tipofortaleza>
+                    <efectividaddos>x3</efectividaddos>
+                </fortaleza>
+            </fortalezas>
+        </tipologia>
+
+        <stats_base>
+            <ps>75</ps>
+            <at>40</at>
+            <def>25</def>
+            <spat>35</spat>
+            <spde>30</spde>
+            <vel>30</vel>
+        </stats_base>
+
+        <evoluciones>
+            <tiene_megaevolucion>false</tiene_megaevolucion>
+            <evolucion>
+                <orden>1</orden>
+                <num_pokedex>1</num_pokedex>
+            </evolucion>
+        </evoluciones>
+
+    </pokemon>
+
+
+    <pokemon nombre= "charizard" num_pokedex= "35" generacion="1" tipo= "pseudo-legendario" url_imagen="https://www.google.com/imgres?imgurl=https%3A%2F%2Fstatic.wikia.nocookie.net%2Fespokemon%2Fimages%2Fc%2Fcf%2FCharizard_de_Rojo_PO.png%2Frevision%2Flatest%3Fcb%3D20180315025050&imgrefurl=https%3A%2F%2Fpokemon.fandom.com%2Fes%2Fwiki%2FCharizard_de_Rojo&tbnid=lLJARQ6XE3_IHM&vet=12ahUKEwi1ufnYnKr2AhXRlFwKHah8DGIQMyhBegQIARB9..i&docid=4mD7SAcwjgWRHM&w=1566&h=881&q=charizard&ved=2ahUKEwi1ufnYnKr2AhXRlFwKHah8DGIQMyhBegQIARB9">
+
+        <datos_generales>
+            <altura>2</altura>
+            <peso>57</peso>
+            <sexo>M</sexo>
+            <categoria>fuego</categoria>
+            <categoria>dragon</categoria>
+            <habilidad>absorbe fuego</habilidad>
+            <habilidad>vuelo</habilidad>
+        </datos_generales>
+
+        <tipologia>
+            <tipos>
+                <tipo>
+                    <descripcion>fuego</descripcion>
+                </tipo>
+            </tipos>
+            <debilidades>
+                <debilidad>
+                    <tipodebilidad>
+                        <descripciondebilidad>agua</descripciondebilidad>
+                    </tipodebilidad>
+                    <efectividad>x2</efectividad>
+                </debilidad>
+            </debilidades>
+            <fortalezas>
+                <fortaleza>
+                    <tipofortaleza>
+                        <descripcionfortaleza>planta</descripcionfortaleza>
+                    </tipofortaleza>
+                    <efectividaddos>x3</efectividaddos>
+                </fortaleza>
+            </fortalezas>
+        </tipologia>
+
+        <stats_base>
+            <ps>90</ps>
+            <at>50</at>
+            <def>65</def>
+            <spat>55</spat>
+            <spde>40</spde>
+            <vel>30</vel>
+        </stats_base>
+
+        <evoluciones>
+            <tiene_megaevolucion>true</tiene_megaevolucion>
+            <evolucion>
+                <orden>1</orden>
+                <num_pokedex>35</num_pokedex>
+            </evolucion>
+        </evoluciones>
+
+    </pokemon>
+
+
+    <pokemon nombre= "squirtle" num_pokedex= "7" generacion="1" tipo= "starter" url_imagen="https://www.google.com/imgres?imgurl=https%3A%2F%2Fpm1.narvii.com%2F6272%2F1d368790873491c186063c1974d4c5e7083b154e_hq.jpg&imgrefurl=https%3A%2F%2Faminoapps.com%2Fc%2Famino_go%2Fpage%2Fblog%2Fsquirtle%2FmvV3_JeikuRw6xRQGo5537WZWgQ8YEqQlP&tbnid=AeKNEJl4mEyMxM&vet=12ahUKEwjtvsHpnKr2AhUSRuUKHZSFD6cQMyggegUIARCgAg..i&docid=jgUcwiAZpXEWrM&w=376&h=391&q=squirtle&ved=2ahUKEwjtvsHpnKr2AhUSRuUKHZSFD6cQMyggegUIARCgAg">
+
+        <datos_generales>
+            <altura>0.5</altura>
+            <peso>8.15</peso>
+            <sexo>M</sexo>
+            <categoria>agua</categoria>
+            <habilidad>hiperchorro</habilidad>
+            <habilidad>ataque rapido</habilidad>
+        </datos_generales>
+
+        <tipologia>
+            <tipos>
+                <tipo>
+                    <descripcion>agua</descripcion>
+                </tipo>
+            </tipos>
+            <debilidades>
+                <debilidad>
+                    <tipodebilidad>
+                        <descripciondebilidad>electrico</descripciondebilidad>
+                    </tipodebilidad>
+                    <efectividad>x3</efectividad>
+                </debilidad>
+            </debilidades>
+            <fortalezas>
+                <fortaleza>
+                    <tipofortaleza>
+                        <descripcionfortaleza>fuego</descripcionfortaleza>
+                    </tipofortaleza>
+                    <efectividaddos>x3</efectividaddos>
+                </fortaleza>
+            </fortalezas>
+        </tipologia>
+
+        <stats_base>
+            <ps>60</ps>
+            <at>40</at>
+            <def>35</def>
+            <spat>45</spat>
+            <spde>50</spde>
+            <vel>40</vel>
+        </stats_base>
+
+        <evoluciones>
+            <tiene_megaevolucion>false</tiene_megaevolucion>
+            <evolucion>
+                <orden>1</orden>
+                <num_pokedex>7</num_pokedex>
             </evolucion>
         </evoluciones>
 
